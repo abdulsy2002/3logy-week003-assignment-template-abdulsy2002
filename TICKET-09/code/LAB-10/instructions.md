@@ -122,7 +122,7 @@ Use coolors.co to generate colors, or choose your own:
 
 ### **Step 4: Style Base Elements**
 
-css
+```css
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
