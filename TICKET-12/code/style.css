@@ -1,0 +1,246 @@
+/* ===============================
+   CSS RESET
+   =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   CSS VARIABLES
+   =============================== */
+:root {
+  --color-primary: #1e40af;
+  --color-secondary: #facc15;
+  --color-text: #fff;
+  --color-bg: #111827;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --font-heading: 'Georgia', serif;
+  --font-body: 'Arial', sans-serif;
+}
+
+/* ===============================
+   BASE STYLES
+   =============================== */
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
+
+/* ===============================
+   NAVIGATION
+   =============================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-primary);
+}
+
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+.nav-menu li a {
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  cursor: pointer;
+}
+
+/* ===============================
+   HERO
+   =============================== */
+.hero{
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-md);
+}
+
+.hero-profile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--color-secondary);
+  object-fit: cover;
+  margin-bottom: var(--spacing-md);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.cta-button {
+  background: var(--color-secondary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #f59e0b;
+}
+
+/* ===============================
+   ABOUT / FEATURES
+   =============================== */
+.about {
+  padding: var(--spacing-lg);
+  text-align: center;
+  background: #111827;
+}
+
+.feature-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.feature-card {
+  background: var(--color-primary);
+  padding: var(--spacing-md);
+  border-radius: 8px;
+}
+
+/* ===============================
+   QUOTE / TESTIMONIAL
+   =============================== */
+.quote {
+  padding: var(--spacing-lg);
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--color-secondary);
+  background: #1f2937;
+}
+
+/* ===============================
+   PROJECTS
+   =============================== */
+.projects {
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.project-card {
+  background: var(--color-primary);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ===============================
+   CONTACT
+   =============================== */
+.contact {
+  padding: var(--spacing-lg);
+  text-align: center;
+  background: var(--color-bg);
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+  padding: var(--spacing-sm);
+  text-align: center;
+  background: var(--color-primary);
+}
+
+/* ===============================
+   MEDIA QUERIES
+   =============================== */
+
+/* Tablet */
+@media(min-width:768px){
+  .nav-toggle{
+    display:none;
+  }
+  .nav-menu{
+    display:flex;
+    flex-direction:row;
+    gap: var(--spacing-md);
+  }
+  .feature-grid{
+    flex-direction: row;
+  }
+  .feature-card{
+    flex: 1;
+  }
+  .project-grid{
+    flex-direction: row;
+  }
+  .project-card{
+    flex: 1;
+  }
+  .hero h1{
+    font-size: 2.5rem;
+  }
+}
+
+/* Desktop */
+@media(min-width:1024px){
+  .hero h1{
+    font-size: 3rem;
+  }
+}

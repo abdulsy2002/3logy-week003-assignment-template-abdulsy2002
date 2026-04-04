@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <nav>
+      <div class="logo">MyPortfolio</div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <img src="profile.jpg" alt="Profile Picture" class="hero-profile">
+    <h1>Welcome to my Portfolio 🎉</h1>
+    <p>Software Development Student | Web Developer | Tech Enthusiast</p>
+    <a href="#contact" class="cta-button">Get in Touch</a>
+  </section>
+
+  <!-- About / Features -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Experience</h3>
+        <p>Worked on multiple web projects and small apps.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Skills</h3>
+        <p>HTML, CSS, JavaScript,  Python, </p>
+      </div>
+      <div class="feature-card">
+        <h3>Dream</h3>
+        <p>To become a professional full-stack developer soon!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote / Testimonial -->
+  <section class="quote">
+    <p>"Code is like humor. When you have to explain it, it’s bad." – Cory House</p>
+  </section>
+
+  <!-- Projects / Gallery -->
+  <section class="projects" id="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="picture (1).jpeg" alt="Project 1">
+        <h3>Project 1</h3>
+      </div>
+      <div class="project-card">
+        <img src="picture (4).png" alt="Project 2">
+        <h3>Project 2</h3>
+      </div>
+      <div class="project-card">
+        <img src="picture (3).png" alt="Project 3">
+        <h3>Project 3</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Let's collaborate or talk about your project!</p>
+    <a href="mailto:abdulsy2002@gmail.com" class="cta-button">Email Me</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 abdurrahman sulaiman. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Hamburger menu toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+  </script>
+</body>
+</html>
